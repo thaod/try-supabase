@@ -4,3 +4,6 @@
 
 # Temp files
 __temp/
+
+# ENV
+.env

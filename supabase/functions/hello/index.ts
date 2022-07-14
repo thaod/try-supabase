@@ -3,13 +3,14 @@
 // This enables autocomplete, go to definition, etc.
 
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts";
+import double from "../_shared/double.ts";
 
 console.log("Hello from Functions!");
 
 serve(async (req) => {
   const { name } = await req.json();
   const data = {
-    message: `Hello ${name}!`,
+    message: `Hello ${name}, double(3)=${double(3)} and secret is '${Deno.env.get("SOME_SECRET")}'.`,
   };
 
   return new Response(JSON.stringify(data), { headers: { "Content-Type": "application/json" } });

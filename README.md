@@ -20,6 +20,8 @@ Supabase will setup Docker containers. When finish, Supabase access info will be
 
 ![](./docs/assets/supabase_start.png)
 
+See section `Development Guide > Develop Edge Function` for starting Supabase function.
+
 2. Access:
 
 - Postgres URL: `postgresql://postgres:postgres@localhost:54322/postgres`
@@ -57,13 +59,24 @@ supabase db changes
 
 ### Develop Edge Function
 
+**New function**
+```
+supabase functions new <func-name>
+```
+
+**Run function locally (with `.env`)**
+```sh
+supabase functions serve <func-name> --env-file .env
+```
+
+**Setup**
+
 - Install Deno CLI & [setup dev env](https://deno.land/manual/getting_started/setup_your_environment)
 - [Tutorial](https://blog.logrocket.com/using-edge-functions-supabase-complete-guide/)
-- New function: `supabase functions new <func-name>`
-- Run function locally: `supabase functions serve <func-name>`
+- [Supabase example](https://github.com/supabase/supabase/tree/master/examples/edge-functions)
 - [Deno development](https://deno.land/manual)
 
-## Deploy
+## Deployment
 
 ### Push database change
 
@@ -74,4 +87,16 @@ supabase db changes
 
 ```sh
 supabase functions deploy <func-name>
+```
+
+Ex:
+
+```sh
+supabase functions deploy hello
+```
+
+### Deploy ENV
+
+```sh
+supabase secrets set --env-file <path-to-dotenv-file>
 ```
