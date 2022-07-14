@@ -10,5 +10,7 @@
             "connectString": "postgresql://postgres:postgres@localhost:54322/postgres"
         }
     ],
-    "sqltools.sessionFilesFolder": "./__temp"
+    "sqltools.sessionFilesFolder": "./__temp",
+    "deno.enable": true,
+    "deno.unstable": false
 }
