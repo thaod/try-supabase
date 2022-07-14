@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 200,
+            "server": "localhost",
+            "port": 54322,
+            "askForPassword": false,
+            "driver": "PostgreSQL",
+            "name": "SupabaseLocal",
+            "connectString": "postgresql://postgres:postgres@localhost:54322/postgres"
+        }
+    ],
+    "sqltools.sessionFilesFolder": "./__temp"
+}

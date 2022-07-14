@@ -1,0 +1,6 @@
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
+
+# Temp files
+__temp/
